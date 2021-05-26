@@ -20,10 +20,10 @@ def detect_face(image):
 
 	for (x, y, w, h) in faces:
 		cv2.rectangle(image, (x,y), (x+w, y+h), (0,255,0), 2)
-		cropped_face = image[y:y+h, x:x+w]
-		cropped_face = cv2.resize(cropped_face, (200,200))
+		crop_face = image[y:y+h, x:x+w]
+		crop_face = cv2.resize(crop_face, (200,200))
 	
-	return cropped_face		
+	return crop_face		
 
 capture = cv2.VideoCapture(0)
 
